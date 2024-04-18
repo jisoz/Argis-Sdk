@@ -94,12 +94,20 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../node_modules/alertifyjs/build/css/alertify.min.css",
+              "../node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+            
+              "../node_modules/@arcgis/core/assets/init.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "fa7bb22f-3065-46b4-b41f-b58c05f5d043"
   }
 }

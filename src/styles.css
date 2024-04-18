@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+/* CSS url as a string */
+@import "https://js.arcgis.com/4.29/@arcgis/core/assets/esri/themes/light/main.css";
+
+img{
+    width: 50px;
+    height: 50px;
+}
