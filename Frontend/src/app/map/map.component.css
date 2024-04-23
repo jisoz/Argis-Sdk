@@ -1,0 +1,94 @@
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#sidebar {
+    position: absolute;
+    top: 80px;
+    left: 0;    
+    width: 600px;
+    height: 100vh;
+    background-color: #f1f1f1;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1; /* Ensure the sidebar is above the map */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds sidebar height */
+}
+
+#mapContainer {
+    position: absolute;
+    top: 70px;
+    left: 300px; /* Adjust to match sidebar width */
+    right: 0;
+    bottom: 0;
+}
+
+#resultsTable {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#resultsTable th, #resultsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#sidebar label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #sidebar select,
+  #sidebar input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #sidebar button:hover {
+    background-color: #0056b3;
+  }
+  
+  #sidebar table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  #sidebar th,
+  #sidebar td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #sidebar th {
+    background-color: #f8f9fa;
+  }

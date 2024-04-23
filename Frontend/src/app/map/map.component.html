@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.29/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.29/"></script>
+    <!-- <script src="map.js"></script> -->
+</head>
+<body>
+    <div id="sidebar">
+        <label for="fieldSelect">Select Field:</label>
+        <select id="fieldSelect" [(ngModel)]="selectedField">
+          <option *ngFor="let field of fields" [value]="field">{{ field }}</option>
+        </select>
+      
+      <div>
+        <label for="queryValue">Enter Value:</label>
+        <input type="text" id="queryValue" [(ngModel)]="queryValue">
+      </div>
+      <button (click)="executeQuery()">Query</button>
+      <table>
+        <thead>
+          <tr>
+            <th *ngFor="let field of fields">{{ field }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let result of queryResults">
+            <td *ngFor="let field of fields">{{ result.attributes[field] }}</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    <div id="mapContainer">
+        <div id="viewDiv" style="height: 550px; width: 100%;"></div>
+    </div>
+    
+</body>
+</html>
