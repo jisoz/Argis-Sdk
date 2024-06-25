@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA  } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,10 +13,15 @@ import { LoginComponent } from './auth/login/login.component';
 import { MapComponent } from './map/map.component';
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TrainingComponent } from './training/training.component';
+import { Train2Component } from './train2/train2.component';
+import { NgxCsvParserModule } from 'ngx-csv-parser';
 const appRoutes:Routes=[
 {path: '', component: MapComponent},
 {path: 'login', component: LoginComponent},
-{path: 'register', component: RegisterComponent}
+{path: 'register', component: RegisterComponent},
+{path: 'train1', component: TrainingComponent },
+{path: 'train2', component: Train2Component}
 ]
 
 @NgModule({
@@ -26,7 +31,9 @@ const appRoutes:Routes=[
     NavbarComponent,
     RegisterComponent,
     LoginComponent,
-    MapComponent
+    MapComponent,
+    TrainingComponent,
+    Train2Component
   ],
   imports: [
     BrowserModule,
@@ -35,10 +42,12 @@ const appRoutes:Routes=[
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
+    NgxCsvParserModule,
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AuthService],
   bootstrap: [AppComponent]
 })

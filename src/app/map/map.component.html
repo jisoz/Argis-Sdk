@@ -19,7 +19,7 @@
         <label for="queryValue">Enter Value:</label>
         <input type="text" id="queryValue" [(ngModel)]="queryValue">
       </div>
-      <button (click)="executeQuery()">Query</button>
+      <button (click)="executeQuery()" class="bt">Query</button>
       <table>
         <thead>
           <tr>
@@ -32,10 +32,17 @@
           </tr>
         </tbody>
       </table>
+      <div style="margin-top: 20px">
+        <button routerLink="/train2">CsvLayer</button>
+      </div>
+     
+     
       </div>
     <div id="mapContainer">
         <div id="viewDiv" style="height: 550px; width: 100%;"></div>
+     
     </div>
     
+
 </body>
 </html>

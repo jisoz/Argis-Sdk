@@ -100,7 +100,9 @@
             ],
             "scripts": [
             
-              "../node_modules/@arcgis/core/assets/init.js"
+              "../node_modules/@arcgis/core/assets/init.js",
+              "https://js.arcgis.com/4.29/"
+             
             ]
           }
         }

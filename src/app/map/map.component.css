@@ -60,7 +60,7 @@
     border-radius: 5px;
   }
   
-  #sidebar button {
+  #sidebar button.bt {
     display: block;
     width: 100%;
     padding: 10px;
