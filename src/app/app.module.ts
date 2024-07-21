@@ -16,12 +16,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TrainingComponent } from './training/training.component';
 import { Train2Component } from './train2/train2.component';
 import { NgxCsvParserModule } from 'ngx-csv-parser';
+import { Train3Component } from './train3/train3.component';
 const appRoutes:Routes=[
 {path: '', component: MapComponent},
 {path: 'login', component: LoginComponent},
 {path: 'register', component: RegisterComponent},
 {path: 'train1', component: TrainingComponent },
-{path: 'train2', component: Train2Component}
+{path: 'train2', component: Train2Component},
+{path:'train3', component: Train3Component}
 ]
 
 @NgModule({
@@ -33,7 +35,8 @@ const appRoutes:Routes=[
     LoginComponent,
     MapComponent,
     TrainingComponent,
-    Train2Component
+    Train2Component,
+    Train3Component
   ],
   imports: [
     BrowserModule,
