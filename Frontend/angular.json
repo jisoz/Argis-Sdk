@@ -26,6 +26,9 @@
             "outputPath": "dist/frontend",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "alertifyjs"
+            ],
             "polyfills": [
               "zone.js"
             ],

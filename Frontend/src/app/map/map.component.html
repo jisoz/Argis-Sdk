@@ -10,15 +10,15 @@
 </head>
 <body>
     <div id="sidebar">
-        <label for="fieldSelect">Select Field:</label>
+        <label for="fieldSelect">Select Country:</label>
         <select id="fieldSelect" [(ngModel)]="selectedField">
-          <option *ngFor="let field of fields" [value]="field">{{ field }}</option>
+          <option *ngFor="let countrie of countries" [value]="countrie">{{ countrie }}</option>
         </select>
       
-      <div>
+      <!-- <div>
         <label for="queryValue">Enter Value:</label>
         <input type="text" id="queryValue" [(ngModel)]="queryValue">
-      </div>
+      </div> -->
       <button (click)="executeQuery()">Query</button>
       <table>
         <thead>
@@ -27,7 +27,8 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let result of queryResults">
+          <div *ngIf="isLoading" class="loader"></div>
+          <tr *ngFor="let result of queryResults" >
             <td *ngFor="let field of fields">{{ result.attributes[field] }}</td>
           </tr>
         </tbody>
