@@ -49,7 +49,7 @@ jobs:
       - name: Deploy React frontend to the server
         run: |
           # Copy the built dist folder to the server
-          scp -v  -o StrictHostKeyChecking=no -P 11997 -r dist/* ${{env.SERVER_USER}}@${{env.SERVER_IP}}:${{ env.FRONTEND_DEPLOY_PATH }}
+          scp -v  -o StrictHostKeyChecking=no -P 11997 -r Frontend/dist/* ${{env.SERVER_USER}}@${{env.SERVER_IP}}:${{ env.FRONTEND_DEPLOY_PATH }}
            ssh -v -o StrictHostKeyChecking=no -p 11997 ${{env.SERVER_USER}}@${{env.SERVER_IP}} 'sudo systemctl restart nginx'
            
             
