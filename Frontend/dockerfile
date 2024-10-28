@@ -1,0 +1,14 @@
+# Stage 1: Build Angular app
+FROM node:18 AS build
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json to install dependencies
+COPY package*.json ./
+RUN npm install --legacy-peer-deps
+
+# Copy all project files and build the app
+COPY . .
+RUN npm run build --prod
+
+# The final output will be in /app/dist/your-angular-app
